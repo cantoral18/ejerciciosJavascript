@@ -1,18 +1,18 @@
-function fizzBuzz(numero) {
-    if (numero % 3 === 0 && numero % 5 === 0) {
-        return "fizzbuzz";
-    } else if (numero % 3 === 0) {
-        return "fizz";
-    } else if (numero % 5 === 0) {
-        return "buzz";
+
+// escribe tu respuesta acá
+function likes(number) {
+    if (number < 1000) {
+        return number.toString();
+    } else if (number < 1000000) {
+        return Math.floor(number / 1000) + "K";
     } else {
-        return numero;
+        return Math.floor(number / 1000000) + "M";
     }
 }
-// escribe tu respuesta acá
 
 // código de prueba
-console.log(fizzBuzz(6)); // "fizz"
-console.log(fizzBuzz(20)); // "buzz"
-console.log(fizzBuzz(30)); // "fizzbuzz"
-console.log(fizzBuzz(8)); // 8
+console.log(likes(983)) // "983"
+console.log(likes(1900)) // "1K"
+console.log(likes(54000)) // "54K"
+console.log(likes(120800)) // "120K"
+console.log(likes(25222444)) // "25M"
